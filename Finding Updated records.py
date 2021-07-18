@@ -1,1 +1,10 @@
-{"metadata":{"kernelspec":{"language":"python","display_name":"Python 3","name":"python3"},"language_info":{"pygments_lexer":"ipython3","nbconvert_exporter":"python","version":"3.6.4","file_extension":".py","codemirror_mode":{"name":"ipython","version":3},"name":"python","mimetype":"text/x-python"}},"nbformat_minor":4,"nbformat":4,"cells":[{"cell_type":"code","source":"# %% [code]\n# Import your libraries\nimport pandas as pd\n\n# Start writing code\nms_employee_salary\n\n#3. DENSE_RANK() --> RANK(method='dense')\nms_employee_salary['DenseRank'] = ms_employee_salary.groupby(['first_name', 'last_name', 'department_id'])['salary'].rank(method='dense', ascending= False)\n\nms_employee_salary[ms_employee_salary['DenseRank']==1][['id', 'first_name', 'last_name', 'department_id', 'salary']]\n","metadata":{"_uuid":"aaa85b9e-108a-4a69-b950-9b394ee3a070","_cell_guid":"8efa4712-c403-4092-a0e1-f34c768ddb0f","collapsed":false,"jupyter":{"outputs_hidden":false},"trusted":true},"execution_count":null,"outputs":[]}]}
+# Import your libraries
+import pandas as pd
+
+# Start writing code
+ms_employee_salary
+
+#3. DENSE_RANK() --> RANK(method='dense')
+ms_employee_salary['DenseRank'] = ms_employee_salary.groupby(['first_name', 'last_name', 'department_id'])['salary'].rank(method='dense', ascending= False)
+
+ms_employee_salary[ms_employee_salary['DenseRank']==1][['id', 'first_name', 'last_name', 'department_id', 'salary']]
