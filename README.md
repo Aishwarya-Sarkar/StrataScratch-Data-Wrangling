@@ -1,3 +1,3 @@
 # StrataScratch-Python-Questions
 
-Solving challengiing data wrangling questions with pandas and NumPy on StrataScratch
+Solving challenging data wrangling questions with pandas and NumPy on StrataScratch
