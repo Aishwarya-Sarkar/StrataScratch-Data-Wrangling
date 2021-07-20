@@ -8,6 +8,7 @@ import pandas as pd
 # Start writing code
 fb_eu_energy.head()
 
+#concat all three dataframes
 union= pd.concat([fb_eu_energy, fb_asia_energy, fb_na_energy])
 union.head()
 union= union.groupby('date').sum().reset_index()
