@@ -1,3 +1,8 @@
+#Question: Calculate the total revenue from each customer in March 2019. Revenue for each order is calculated by multiplying the order_quantity with the order_cost.
+#Output the revenue along with the customer id and sort the results based on the revenue in descending order.
+#Link to Question: https://platform.stratascratch.com/coding/9782-customer-revenue-in-march?python=1
+
+
 # Import your libraries
 import pandas as pd
 
