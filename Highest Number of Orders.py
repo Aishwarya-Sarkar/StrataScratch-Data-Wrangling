@@ -1,3 +1,7 @@
+#Question: Find the customer who has placed the highest number of orders. Output the id of the customer along with the corresponding number of orders.
+#Link to question: https://platform.stratascratch.com/coding/9909-highest-number-of-orders?python=1
+
+
 # Import your libraries
 import pandas as pd
 
