@@ -6,6 +6,6 @@ customers.head()
 
 df=customers.merge(orders, how= 'inner', right_on='cust_id' , left_on='id')
 
-df['total_orders']= df.groupby('cust_id')['order_quantity'].sum()
+df1=df.groupby('cust_id')['order_quantity'].count().reset_index()
 
-df[df['total_orders']== df['total_orders'].max()][['cust_id', 'total_orders']]
+df1[df1['order_quantity']== df1['order_quantity'].max()][['cust_id', 'order_quantity']]
