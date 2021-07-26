@@ -1,3 +1,6 @@
+#Question: Find employees who are earning more than their managers. Output the employee name along with the corresponding salary.
+#Link to Question: https://platform.stratascratch.com/coding/9894-employee-and-manager-salaries?python=1
+
 # Import your libraries
 import pandas as pd
 
