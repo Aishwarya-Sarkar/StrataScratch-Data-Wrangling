@@ -12,13 +12,14 @@ sf_transactions.head()
 sf_transactions['month']= sf_transactions['created_at'].dt.month
 sf_transactions['year']= sf_transactions['created_at'].dt.year
 
+sf_transactions['year_month'] = sf_transactions['created_at'].dt.to_period('M')
+
 #sf_transactions['year-month']= sf_transactions['created_at'].dt.year.astype('str')+ '-'+sf_transactions['created_at'].dt.month.astype('str')
 
-sf_transactions=sf_transactions.groupby(['year','month'])['value'].sum().reset_index()
+sf_transactions=sf_transactions.groupby(['year_month'])['value'].sum().reset_index()
 
 sf_transactions['pre']=sf_transactions['value'].shift(1)
 
-sf_transactions['diff_percentage']=(sf_transactions['value']-sf_transactions['pre'])/sf_transactions['pre']*100
+sf_transactions['diff_percentage']=round(((sf_transactions['value']-sf_transactions['pre'])/sf_transactions['pre']*100),2)
 
-sf_transactions[['year', 'month', 'diff_percentage']]
-sf_transactions
+sf_transactions[['year_month', 'diff_percentage']]
